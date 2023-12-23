@@ -1,0 +1,21 @@
+package stringhe_esercizi;
+
+public class StringaPalindorma {
+
+	private String casa = "casa";
+	
+	
+	
+	public boolean  palindorma() {
+		//trasformare la stringa in un array
+		char[] stringa = casa.toCharArray();
+		int i = 0;
+		if(stringa[i] == stringa[stringa.length-1 - i]) {
+			i++;
+		}else {
+			return false;
+		}
+		
+		return true;
+	}
+}

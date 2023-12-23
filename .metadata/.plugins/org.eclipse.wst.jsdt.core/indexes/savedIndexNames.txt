@@ -1,0 +1,6 @@
+INDEX VERSION 1.4+C:\Users\LENOVO\workspace-Adriana\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+2096409684.index
+157983986.index
+1788288912.index
+3373586612.index
+1097891711.index
