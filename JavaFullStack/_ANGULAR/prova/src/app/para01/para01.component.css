@@ -1,0 +1,11 @@
+.parabody {
+    background-color: azure;
+    border: 2px solid blue;
+}
+
+.contenitore {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+}

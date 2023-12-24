@@ -1,0 +1,52 @@
+<h2 class="text-uppercase text-center py-4">
+  Elenco clienti
+  <button (click)="addViaForm()">
+    <img src="../../assets/images/add.png" alt="Immagine Add">
+  </button>
+</h2>
+<div class="container ms_container">
+  <table class="table table-striped table-bordered table-hover">
+    <thead>
+      <tr class="text-uppercase">
+        <th scope="col">Id Cliente</th>
+        <th scope="col">Nome</th>
+        <th scope="col">Cognome</th>
+        <th scope="col">Email </th>
+        <th scope="col">Indirizzo</th>
+        <th scope="col">Città</th>
+        <th scope="col">Provincia</th>
+        <th scope="col">Cap</th>
+        <th scope="col" colspan="3">Operazioni</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let c of clienti">
+        <td class="fw-bold">{{c.idCliente}}</td>
+        <td>{{c.nome}}</td>
+        <td>{{c.cognome}}</td>
+        <td>{{c.email}}</td>
+        <td>{{c.indirizzo}}</td>
+        <td>{{c.citta}}</td>
+        <td>{{c.provincia}}</td>
+        <td>{{c.cap}}</td>
+        <td>
+          <button class="btn btn-danger" type="button" (click)="deleteViaForm(c)">
+          <img src="../../assets/images/delete.png" alt="Immagine Delete">
+          </button>          
+          </td><td>
+          <button class="btn btn-danger" type="button" (click)="dummy(c)">
+          <img src="../../assets/images/update.png" alt="Immagine Update">
+          </button>
+        </td><td>
+          <button class="btn btn-danger" type="button" (click)="dummy(c)">
+          <img src="../../assets/images/clone.png" alt="Immagine Clone">
+          </button>
+
+
+          <!-- <button class="btn btn-danger" type="button" (click)="delete(c)">Elimina</button> -->
+          <!-- <button class="btn btn-danger" (click)="openDialog(c)">Elimina</button>-->
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

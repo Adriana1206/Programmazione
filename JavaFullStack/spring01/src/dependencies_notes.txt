@@ -1,0 +1,22 @@
+// dependencies_notes.txt
+
+1. **Spring Boot Starter Data JPA:**
+   - Fornisce supporto per Spring Data JPA, che semplifica l'accesso ai dati con un approccio basato su repository.
+
+2. **Spring Boot Starter Web:**
+   - Fornisce un set di dipendenze per sviluppare applicazioni web Spring Boot, inclusa la configurazione di Tomcat incorporato.
+
+3. **Spring Boot DevTools:**
+   - Fornisce strumenti utili per lo sviluppo, come il riavvio automatico dell'applicazione durante lo sviluppo.
+
+4. **MySQL Connector/J:**
+   - Connettore JDBC per MySQL. Consente a Spring Boot di comunicare con un database MySQL.
+
+5. **MariaDB Java Client:**
+   - Driver JDBC per MariaDB. Consente a Spring Boot di comunicare con un database MariaDB.
+
+6. **Spring Boot Starter Test:**
+   - Fornisce dipendenze per il testing in un'applicazione Spring Boot, inclusi JUnit, Hamcrest e altri.
+
+7. **Tomcat Embed Jasper:**
+   - Fornisce il supporto per l'esecuzione di JSP (JavaServer Pages) all'interno di un contenitore embedded Tomcat.

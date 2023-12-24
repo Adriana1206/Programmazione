@@ -1,0 +1,53 @@
+<div class="div-form">
+    <form [formGroup]="clientiForm">
+      <div>
+        <label for="idCliente">Id </label>
+        <input type="text" id="idCliente" name="idCliente" [readonly]="true" formControlName="idCliente">
+      </div>
+  
+      <div>
+        <label for="nome">Nome </label>
+        <input type="text" id="nome" placeholder="Digita il nome ..." name="nome" [readonly]="readonly" required formControlName="nome">
+      </div>
+  
+      <div>
+        <label for="cognome">Cognome </label>
+        <input type="text" id="cognome" placeholder="Digita il cognome ..." name="cognome" [readonly]="readonly" required formControlName="cognome">
+      </div>
+  
+      <div>
+        <label for="email">Email </label>
+        <input type="text" id="email" placeholder="Digita l'email ..." name="email" formControlName="email" [readonly]="readonly" required>
+      </div>
+  
+      <div>
+        <label for="indirizzo">Indirizzo </label>
+        <input type="text" id="indirizzo" placeholder="Digita l'indirizzo ..." name="indirizzo" formControlName="indirizzo" [readonly]="readonly" required>
+      </div>
+  
+      <div>
+        <label for="citta">Città </label>
+        <input type="text" id="citta" placeholder="Digita la citta ..." name="citta" formControlName="citta" [readonly]="readonly" required>
+      </div>
+
+      <div>
+        <label for="provincia">Provincia </label>
+        <!-- input type="text" id="provincia" placeholder="Digita la provincia ..." name="provincia" formControlName="provincia" maxlength="2" required -->
+        <select id="provincia" name="provincia" formControlName="provincia" [disabled]="readonly" >
+          <option [disabled]="readonly" *ngFor="let provincia of province" value="{{provincia.siglaAutomobilistica}}">{{provincia.nome}}</option>
+        </select>
+      </div>
+  
+   
+      <div>
+        <label for="cap">CAP </label>
+        <input type="number" id="cap" placeholder="Digita il cap ..." name="cap" formControlName="cap" maxlength="5" [readonly]="readonly" required>
+      </div>
+   
+      <!-- <input type="button" [value]="mode"  (click)="delete()" class="btn"> -->
+      <input type="button" [value]="mode"  (click)="execute()" class="btn">
+      <input type="button" value="Back"  (click)="back()" class="btn">
+  
+    </form>
+  </div>
+  

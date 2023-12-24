@@ -1,0 +1,18 @@
+/* CSS per "dipingere" la table */
+table,
+tr,
+th,
+td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+th {
+    background-color: #ddd;
+}
+tr:nth-child(odd) {
+    background-color: #eee;
+}
+tr:nth-child(even) {
+    background-color: #fff;
+}

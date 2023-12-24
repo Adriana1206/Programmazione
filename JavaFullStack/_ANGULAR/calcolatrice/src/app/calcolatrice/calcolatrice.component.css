@@ -1,0 +1,8 @@
+.contenitore{
+    border: 5px solid #97C8EB;
+    border-radius: 10px;
+    width: 130px;
+    height: 200px;
+    padding: 10px;
+    background-color:#093A3E;
+}
