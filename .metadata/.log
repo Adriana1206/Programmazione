@@ -10844,8 +10844,5 @@ java.lang.NullPointerException: Cannot invoke "org.springsource.ide.eclipse.comm
 !ENTRY org.eclipse.wst.sse.core 2 2 2023-12-24 00:34:28.254
 !MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.wildwebdeveloper.html vs. org.eclipse.wst.html.core.htmlsource
 
-!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-12-24 00:48:47.255
-!MESSAGE close() called when useCnt is already zero for Repository[C:\Users\LENOVO\workspace-Adriana\Programmazione\.git]
-
-!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-24 00:48:47.277
-!MESSAGE Classpath changed for project: Programmazione
+!ENTRY org.eclipse.wst.sse.core 2 2 2023-12-24 01:06:22.829
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.wildwebdeveloper.html vs. org.eclipse.wst.html.core.htmlsource
