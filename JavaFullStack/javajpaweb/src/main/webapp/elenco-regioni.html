@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elenco delle regioni</title>
+    <script src="js/net-functions.js"></script>
+    <style>
+        /*CSS per "dipingere" la table */
+
+        table, tr, th, td{
+            border: 1px solid black;
+            border-collapse: collapse;;
+        }
+    </style>
+</head>
+<body>
+    <h1>Elenco delle regioni</h1>
+
+    <!--l'elenco delle regioni deve partire da qui-->
+    <!--voglio creare l'elenco dinamicamente-->
+    <!--id, regione, url, latitudine, longitudine-->
+    <!--dati presentati in una table-->
+    <!--la prima riga della table è quella delle intestazioni-->
+    <div id="segnaposto"></div>
+
+    <script>
+        "use strict"
+        const intestazioni = ["id","regione","url","latitudine","longitudine"];
+        //acquisire il segnaposto
+        const segnaposto = document.getElementById("segnaposto");
+        console.log(segnaposto);
+
+        //creare una table e piazzarla nel segnaposto
+        const tabella = document.createElement("table");
+
+        //la piazzo nel segnaposto
+        segnaposto.appendChild(tabella);
+
+        //creare una tr
+        let tr = document.createElement("tr");
+        //appenderla alla table
+        tabella.appendChild(tr);
+
+        //per ogni elemento dell'array creo una th
+        for(let intestazione of intestazioni){
+            const th = document.createElement("th");
+
+            //creo il payload con l'intestazione
+            const textNode = document.createTextNode(intestazione);
+
+            //aggiungo l'intestazione alla th
+            th.appendChild(textNode);
+
+            //appendo la th alla row
+            tr.appendChild(th);
+        }
+
+        getJson("json/regioni_updated.json", createTableBody); //chiamo la funzione di retrieve dei dati
+
+        function createTableBody(regioni) {
+             console.log(regioni);
+            for(const regione of regioni) {
+                const tr = document.createElement("tr");
+ 
+                //ID
+                let td = document.createElement("td");
+                let textNode = document.createTextNode(regione.id);
+                td.appendChild(textNode);
+                tr.appendChild(td);
+                
+                //NOME
+                td = document.createElement("td");
+                textNode = document.createTextNode(regione.nome);
+                td.appendChild(textNode);
+                tr.appendChild(td);  
+ 
+                //URL
+                td = document.createElement("td");
+
+                const a = document.createElement("a");
+                a.href=regione["url"];
+                a.target="_blank";
+                textNode = document.createTextNode(regione["url"]);
+                a.appendChild(textNode);
+
+                td.appendChild(a);
+                tr.appendChild(td);
+ 
+                //LATITUDINE
+                td = document.createElement("td");
+                textNode = document.createTextNode(regione["latitudine"]);
+                td.appendChild(textNode);
+                tr.appendChild(td);
+ 
+                //LONGITUDINE
+                td = document.createElement("td");
+                textNode = document.createTextNode(regione.longitudine);
+                td.appendChild(textNode);
+                tr.appendChild(td);
+ 
+                tabella.appendChild(tr);
+            }
+        }
+        
+    </script>
+</body>
+</html>

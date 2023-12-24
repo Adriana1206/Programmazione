@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<persistence version="3.0" xmlns="https://jakarta.ee/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence
+             https://jakarta.ee/xml/ns/persistence/persistence_3_0.xsd">
+
+	<persistence-unit name="mariadb" transaction-type="RESOURCE_LOCAL">
+		<description>JPA persistence provider</description>
+		<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+		<class>com.example.javadb.entities.Cliente</class>
+		<properties>
+			<!-- configurazione del JDBC Driver  -->
+			<property name="jakarta.persistence.jdbc.driver" value="org.mariadb.jdbc.Driver" />
+			<property name="jakarta.persistence.jdbc.url" value="jdbc:mariadb://localhost/javafs" />
+			<property name="jakarta.persistence.jdbc.user" value="master" />
+			<property name="jakarta.persistence.jdbc.password" value="ciao mondo" />
+			<property name="hibernate.dialect" value="org.hibernate.dialect.MariaDBDialect" />
+
+			<!-- database to code: il programmatore analizza il DB e formatta le Entity (noi) -->
+			<!-- code to database: il programmatore crea le Entity e la JPA le manutiene -->
+			<!-- con che criterio manutenere il database: update=se vi sono modifiche esegui le alter -->
+			<property name="jakarta.persistence.schema-generation.database.action" value="update" />
+
+			<!-- come stampare gli statement SQL  -->
+			<property name="hibernate.show_sql" value="true" />
+			<property name="hibernate.format_sql" value="true" />
+			<property name="hibernate.highlight_sql" value="true" />
+
+			<!-- come effettuare la ricerca delle entities -->
+			<property name="packagesToScan" value="com.example.javadb.entities" />
+            <property name="hibernate.archive.autodetection" value="class" />
+		</properties>
+	</persistence-unit>
+
+	<persistence-unit name="mysql" transaction-type="RESOURCE_LOCAL">
+		<description>JPA persistence provider</description>
+		<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+		<class>com.example.javadb.entities.Cliente</class>
+		<properties>
+
+			<property name="jakarta.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver" />
+			<property name="jakarta.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/javafs" />
+			<property name="jakarta.persistence.jdbc.user" value="master" />
+			<property name="jakarta.persistence.jdbc.password" value="ciao mondo" />
+			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect" />
+
+			<!-- database to code: il programmatore analizza il DB e formatta le Entity (noi) -->
+			<!-- code to database: il programmatore crea le Entity e la JPA le manutiene -->
+			<property name="jakarta.persistence.schema-generation.database.action" value="update" />
+
+			<property name="hibernate.show_sql" value="true" />
+			<property name="hibernate.format_sql" value="true" />
+			<property name="hibernate.highlight_sql" value="true" />
+
+			<property name="packagesToScan" value="com.example.javadb.entities" />
+            <property name="hibernate.archive.autodetection" value="class" />
+		</properties>
+	</persistence-unit>
+</persistence>
+

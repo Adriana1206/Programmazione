@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/net-functions.js"></script>
+    <title>Fox</title>
+</head>
+<body>
+    <h1>Fox</h1>
+    <div>
+        <input type="button" value="reload" onclick="reload()">
+    </div>
+    <div><img id="id001" src="" alt="fox"></div>
+    <script>
+        /* {
+                "image": "https://randomfox.ca/images/39.jpg",
+                "link": "https://randomfox.ca/?i=39"
+            }    
+        */  
+        /*  Quando eseguo il caricamento della url
+            devo prendere il campo link che ricevo e lo
+            devo mettere nell'attributo src della img   */
+
+        const url = "https://randomfox.ca/floof/"
+        function reload(){
+            console.log("bottone premuto");
+            //qui devo leggere l'url per ottenere il json 
+            //contenente il link all'immagine
+            getJson(url, modificaImmagine);//chiamo la funzione di retrieve dei dati
+        }
+
+        function modificaImmagine(immagine){
+            console.log(immagine.image);
+            const img = document.getElementById("id001");
+            img.src=immagine.image;
+        }   
+    </script>
+</body>
+</html>

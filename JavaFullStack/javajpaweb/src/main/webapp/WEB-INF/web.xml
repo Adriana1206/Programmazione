@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" version="3.1">
+  <display-name>javajpaweb</display-name>
+  <servlet>
+    <description>
+		</description>
+    <display-name>HelloServlet</display-name>
+    <servlet-name>HelloServlet</servlet-name>
+    <servlet-class>com.example.javadb.servlets.HelloServlet</servlet-class>
+    <init-param>
+      <param-name>app-name</param-name>
+      <param-value>Java Jpa Web</param-value>
+    </init-param>
+    <init-param>
+      <param-name>app-author</param-name>
+      <param-value>Adriana</param-value>
+    </init-param>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>HelloServlet</servlet-name>
+    <url-pattern>/HelloServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>HelloServlet</servlet-name>
+    <url-pattern>/hs</url-pattern>
+  </servlet-mapping>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <description>Lista delle regioni</description>
+    <display-name>RegioniServlet</display-name>
+    <servlet-name>RegioniServlet</servlet-name>
+    <servlet-class>com.example.javadb.servlets.RegioniServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RegioniServlet</servlet-name>
+    <url-pattern>/RegioniServlet</url-pattern>
+    <url-pattern>/rs</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ClientiServlet</display-name>
+    <servlet-name>ClientiServlet</servlet-name>
+    <servlet-class>com.example.javadb.servlets.ClientiServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ClientiServlet</servlet-name>
+    <url-pattern>/ClientiServlet</url-pattern>
+    <url-pattern>/cs</url-pattern>
+  </servlet-mapping>
+  
+  <welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+</web-app>
