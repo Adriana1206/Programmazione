@@ -6,6 +6,12 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="C:\Users\LENOVO\workspace-Adriana\LearnBasicJavaScript"/>
+			<item value="C:\Users\LENOVO\workspace-Adriana\JavaFullStack"/>
+			<item value="C:\Users\LENOVO\workspace-Adriana\Esercitazione"/>
+			<item value="C:\Users\LENOVO\workspace-Adriana\LearBasicJavaScript"/>
+			<item value="C:\Users\LENOVO\workspace-Adriana"/>
+			<item value="C:\Users\LENOVO\workspace-Adriana\Programmazione"/>
 			<item value="C:\Users\LENOVO\git\nuovo-progetto"/>
 		</list>
 	</section>
